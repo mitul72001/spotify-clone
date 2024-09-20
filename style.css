@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --a:0;
+}
+
+.body {
+  background-color: rgb(16, 15, 15);
+  color: white;
+}
+.left {
+  width: 25vw;
+  padding: 15px;
+}
+.right {
+  width: 75vw;
+  
+}
+.home {
+}
+.home ul li {
+  width: 15px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding-top: 15px;
+}
+.heading {
+  display: flex;
+  gap: 15px;
+  width: 344px;
+  padding: 23px 14px;
+  font-weight: bold;
+  align-items: center;
+  font-size: 13px;
+}
+.heading img {
+  width: 25px;
+}
+.library {
+  min-height: 75vh;
+  position: relative;
+}
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+.footer a {
+  color: grey;
+}
+.right {
+  margin: 20px 0;
+  margin-right: 13px;
+  position: relative;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header > * {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+}
+.ganna {
+  padding: 15px;
+}
+.ganna .card {
+  width: 200px;
+  padding: 10px;
+  background-color: #252525;
+  border-radius: 10px;
+}
+.card > * {
+  padding-top: 10px;
+}
+.card {
+  position: relative;
+}
+
+.cardContain {
+  margin-top: 25px;
+  display: flex;
+  
+  gap: 15px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+  padding-top: 0;
+  border-radius: 5px;
+}
+.circular-container {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  background-color: #20a920;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: 0;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  opacity: var(--a);
+  
+}
+.circular-container svg {
+  width: 50%; /* Adjust the size of the SVG inside the circle */
+  height: 50%; /* Adjust the size of the SVG inside the circle */
+  stroke: black; /* Set SVG stroke color to black */
+  stroke-width: 1.5;
+  /* Adjust stroke width if needed */
+}
+.sign {
+  background-color: #121212;
+  color: rgb(134, 136, 139);
+  font-weight: bold;
+  font-size: medium;
+  border: none;
+  outline: none;
+  width: 100px;
+  cursor: pointer;
+}
+.sign:hover {
+  color: rgb(246, 249, 248);
+  font-size: 1.1rem;
+}
+.login {
+  height: 40px;
+  width: 100px;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 350px;
+  cursor: pointer;
+}
+.login:hover {
+  font-size: 1.1em;
+}
+
+.playbar {
+
+  bottom: 25px;
+  background-color: rgba(73, 74, 73, 0.845);
+  padding: 12px;
+  width: 70.5vw;
+  border-radius: 10px;
+  position: fixed;
+  min-height: 30px;
+}
+.sbtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.ham {
+  display: none;
+}
+.songlist {
+  height: 450px;
+  overflow: auto;
+}
+.songlist ul {
+  padding: 0 12px;
+}
+.songlist ul li {
+  list-style-type: decimal;
+  display: flex;
+  gap: 10px;
+  padding: 12px 0;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 10px;
+  position: relative;
+  background-color: #252525;
+}
+.play {
+  align-items: center;
+  position: absolute;
+  display: flex;
+
+  right: 5px;
+  bottom: 30%;
+}
+.songlist ul li .info {
+  width: 180px;
+}
+.seekbar {
+  height: 5px;
+  width: 98%;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 3px;
+
+  background-color: rgb(149, 145, 145);
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(222, 214, 214);
+  position: relative;
+  bottom: 5px;
+  left: 0%;
+  transition: left 0.5s;
+}
+.sbtn img {
+  cursor: pointer;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+.close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.songInfo ,.songtime{
+ width: 280px;
+ padding: 0 12px;
+ height: 40px;
+ display: flex;
+ justify-content: center;
+}
+.songlist div{
+  word-break: break-all;
+}
+.card:hover{
+  background-color: black;
+  cursor: pointer;
+  --a:1;
+  
+}
+a{
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .ganna{
+    height: 100vh;
+  }
+  .left {
+    background-color: black;
+    position: absolute;
+    left: -30px;
+    transition: all 1s;
+    z-index: 2;
+    width: 350px;
+    
+  }
+  .right {
+    width: 100vw;
+    
+  }
+  .playbar {
+    width: 95vw;
+    left: 1vw;
+  }
+  .ham {
+    display: block;
+    cursor: pointer;
+  }
+  .playbar {
+    width: calc(100vw-60px);
+  }
+  .right {
+    margin: 0;
+  }
+  .seekbar {
+    width: 90%;
+  }
+  .cardContain {
+    margin: 0;
+    justify-content: center;
+  }
+  
+}
